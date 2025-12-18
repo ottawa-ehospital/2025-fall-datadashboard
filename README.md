@@ -1,101 +1,82 @@
 # eHospital Frontend Module
 
-A modern, modular frontend built with Next.js 16, React 19, and TypeScript. Designed as an **integration-ready module** for larger e-hospital (eHOS) systems.
+Modern hospital management interface built with Next.js 16, React 19, and TypeScript. Ready to plug into existing e-hospital systems.
 
-## 🚀 Tech Stack
+## Tech Stack
 
-- **Framework:** Next.js 16 (App Router)
-- **Language:** TypeScript
-- **Styling:** Tailwind CSS, shadcn/ui (New York), Radix UI
-- **Forms:** React Hook Form + Zod
-- **Charts:** Recharts, d3
-- **Icons:** Lucide React
-- **Theme:** next-themes (dark mode support)
+- Next.js 16 (App Router)
+- TypeScript
+- Tailwind CSS + shadcn/ui (New York variant)
+- React Hook Form + Zod validation
+- Recharts & d3 for data viz
+- Lucide icons
+- Dark mode via next-themes
 
-## 📁 Project Structure
-
+## Project Structure
 ```
 .
-├── app/              # Next.js App Router pages & layouts
-├── components/       # Reusable UI components
-│   └── ui/          # shadcn/ui atomic components
-├── hooks/           # Custom React hooks
-├── lib/             # Utilities and helpers
-├── public/          # Static assets
+├── app/              # Routes and layouts
+├── components/       # Reusable components
+│   └── ui/          # shadcn/ui primitives
+├── hooks/           # Custom hooks
+├── lib/             # Utils and helpers
+├── public/          # Static files
 └── package.json
 ```
 
-## 🛠️ Getting Started
+## Quick Start
 
-### Prerequisites
-
-- Node.js 18+
-- pnpm (recommended) or npm
-
-### Installation
-
+**Requirements:** Node.js 18+, pnpm recommended
 ```bash
-# Install dependencies
 pnpm install
-
-# Run development server
 pnpm dev
 ```
 
-Application runs at `http://localhost:3000`
+Runs on `http://localhost:3000`
 
-## 🔧 Configuration
+## Configuration
 
-### Path Aliases
-```typescript
-@/components
-@/hooks
-@/lib
-```
+**Path aliases:**
+- `@/components`
+- `@/hooks`
+- `@/lib`
 
-### Build Settings
-- TypeScript errors ignored during builds (`ignoreBuildErrors: true`)
-- Images unoptimized (`unoptimized: true`)
+**Build settings:**
+- TS errors ignored in production builds
+- Image optimization disabled (configure for your CDN)
 
-## 🎯 Integration Options
+## Integration
 
-### Option 1: Micro-Frontend
-- Deploy as standalone module
-- Mount within main eHOS frontend
-- Share authentication, themes, and API layers
+**As a micro-frontend:**
+Deploy independently and mount into your main eHOS app. Share auth, theming, and API clients.
 
-### Option 2: Component Library
-- Extract `components/`, `hooks/`, `lib/`
-- Merge into existing frontend
-- Adapt routes to host application structure
+**As a component library:**
+Extract the `components/`, `hooks/`, and `lib/` folders into your existing codebase. Map routes to your app structure.
 
-## ✅ What's Included
+## What You Get
 
-- Modern UI layouts and page structure
-- Reusable, modular components
-- Form handling with validation
-- Data visualization components
-- Dark mode support
+- Full UI layouts and routing
+- Form components with validation
+- Charts and data visualization
+- Dark mode toggle
+- Mobile-responsive design
 
-## ⚠️ What's NOT Included
+## What's Missing
 
-- Backend APIs or services
-- Authentication/authorization
-- Database or persistent storage
-- Production deployment config
+This is frontend only. You'll need to provide:
 
-## 💡 Use Cases
+- API endpoints and backend services
+- Authentication system
+- Database connections
+- Production deployment setup
 
-- Frontend module for e-hospital systems
-- UI prototype and reference implementation
-- Foundation for healthcare dashboards
-- Component library for medical interfaces
+## Good For
 
-## 📝 Notes
-
-This is a **frontend-only** implementation focused on UI architecture and component reusability. It's designed for system integration and requires backend services to be provided by the host application.
+- Hospital management dashboards
+- Medical record interfaces
+- UI prototyping for healthcare apps
+- Component reference for clinical systems
 
 ---
 
-**License:** MIT  
-**Framework:** Next.js 16 with App Router
+MIT License
